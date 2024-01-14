@@ -1,0 +1,92 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter --quiet assemble --no-version-check --depfile C:\Users\fpras\Downloads\programming\Flutter\assignment\Ambarisha-Frontend-New-master\build\app\intermediates\flutter\debug/flutter_build.d --output C:\Users\fpras\Downloads\programming\Flutter\assignment\Ambarisha-Frontend-New-master\build\app\intermediates\flutter\debug -dTargetFile=C:\Users\fpras\Downloads\programming\Flutter\assignment\Ambarisha-Frontend-New-master\lib\main.dart -dTargetPlatform=android -dBuildMode=debug -dTrackWidgetCreation=true --DartDefines=RkxVVFRFUl9XRUJfQVVUT19ERVRFQ1Q9dHJ1ZQ==,RkxVVFRFUl9XRUJfQ0FOVkFTS0lUX1VSTD1odHRwczovL3d3dy5nc3RhdGljLmNvbS9mbHV0dGVyLWNhbnZhc2tpdC8zZjNlNTYwMjM2NTM5YjdlMjcwMmY1YWM3OTBiMmE0NjkxYjMyZDQ5Lw== debug_android_application
+
+## exception
+
+FormatException: FormatException: Unexpected end of input (at character 1)
+
+^
+
+
+```
+#0      _ChunkedJsonParser.fail (dart:convert-patch/convert_patch.dart:1383:5)
+#1      _ChunkedJsonParser.close (dart:convert-patch/convert_patch.dart:501:7)
+#2      _parseJson (dart:convert-patch/convert_patch.dart:36:10)
+#3      JsonDecoder.convert (dart:convert/json.dart:610:36)
+#4      JsonCodec.decode (dart:convert/json.dart:216:41)
+#5      jsonDecode (dart:convert/json.dart:155:10)
+#6      Session._refreshSessionData.parseContents (package:unified_analytics/src/session.dart:83:11)
+#7      Session._refreshSessionData (package:unified_analytics/src/session.dart:93:7)
+#8      new Session (package:unified_analytics/src/session.dart:28:5)
+#9      new AnalyticsImpl (package:unified_analytics/src/analytics.dart:394:23)
+#10     new Analytics (package:unified_analytics/src/analytics.dart:72:12)
+#11     runInContext.<anonymous closure> (package:flutter_tools/src/context_runner.dart:91:24)
+#12     AppContext._generateIfNecessary.<anonymous closure> (package:flutter_tools/src/base/context.dart:104:42)
+#13     _LinkedHashMapMixin.putIfAbsent (dart:collection-patch/compact_hash.dart:543:23)
+#14     AppContext._generateIfNecessary (package:flutter_tools/src/base/context.dart:92:20)
+#15     AppContext.get (package:flutter_tools/src/base/context.dart:121:32)
+#16     analytics (package:flutter_tools/src/globals.dart:93:36)
+#17     exitWithHooks (package:flutter_tools/src/base/process.dart:583:15)
+#18     run.<anonymous closure>.<anonymous closure> (package:flutter_tools/runner.dart:117:24)
+<asynchronous suspension>
+#19     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:150:19)
+<asynchronous suspension>
+#20     main (package:flutter_tools/executable.dart:90:3)
+<asynchronous suspension>
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel stable, 3.16.5, on Microsoft Windows [Version 10.0.22621.2861], locale en-IN)
+    • Flutter version 3.16.5 on channel stable at C:\src\flutter
+    • Upstream repository https://github.com/flutter/flutter.git
+    • Framework revision 78666c8dc5 (4 weeks ago), 2023-12-19 16:14:14 -0800
+    • Engine revision 3f3e560236
+    • Dart version 3.2.3
+    • DevTools version 2.28.4
+
+[✓] Windows Version (Installed version of Windows is version 10 or higher)
+
+[✓] Android toolchain - develop for Android devices (Android SDK version 33.0.1)
+    • Android SDK at C:\Users\fpras\AppData\Local\Android\sdk
+    • Platform android-34, build-tools 33.0.1
+    • Java binary at: C:\Program Files\Android\Android Studio\jbr\bin\java
+    • Java version OpenJDK Runtime Environment (build 11.0.15+0-b2043.56-8887301)
+    • All Android licenses accepted.
+
+[✓] Chrome - develop for the web
+    • Chrome at C:\Program Files\Google\Chrome\Application\chrome.exe
+
+[✓] Visual Studio - develop Windows apps (Visual Studio Build Tools 2022 17.5.4)
+    • Visual Studio at C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools
+    • Visual Studio Build Tools 2022 version 17.5.33530.505
+    • Windows 10 SDK version 10.0.22000.0
+
+[✓] Android Studio (version 2022.1)
+    • Android Studio at C:\Program Files\Android\Android Studio
+    • Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    • Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+    • Java version OpenJDK Runtime Environment (build 11.0.15+0-b2043.56-8887301)
+
+[✓] VS Code (version 1.85.1)
+    • VS Code at C:\Users\fpras\AppData\Local\Programs\Microsoft VS Code
+    • Flutter extension version 3.80.0
+
+[✓] Connected device (4 available)
+    • SM F127G (mobile) • RZ8RC11F92R • android-arm64  • Android 13 (API 33)
+    • Windows (desktop) • windows     • windows-x64    • Microsoft Windows [Version 10.0.22621.2861]
+    • Chrome (web)      • chrome      • web-javascript • Google Chrome 120.0.6099.130
+    • Edge (web)        • edge        • web-javascript • Microsoft Edge 120.0.2210.133
+
+[✓] Network resources
+    • All expected network resources are available.
+
+• No issues found!
+```
